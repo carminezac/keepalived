@@ -1,8 +1,10 @@
-# carminezac/keepalived
+# ![Logo](https://raw.githubusercontent.com/carminezac/keepalived/main/logo.png) carminezac/keepalived
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/carminezac/keepalived)](https://hub.docker.com/r/carminezac/keepalived)
-[![Docker Image Size](https://img.shields.io/docker/image-size/carminezac/keepalived/latest)](https://hub.docker.com/r/carminezac/keepalived)
-[![Docker Stars](https://img.shields.io/docker/stars/carminezac/keepalived)](https://hub.docker.com/r/carminezac/keepalived)
+[![Image Size](https://img.shields.io/docker/image-size/carminezac/keepalived/latest)](https://hub.docker.com/r/carminezac/keepalived)
+[![GitHub Repo](https://img.shields.io/badge/source-github-blue?logo=github)](https://github.com/carminezac/keepalived)
+[![GHCR](https://img.shields.io/badge/registry-ghcr.io-green?logo=github)](https://ghcr.io/carminezac/keepalived)
+
 
 **Lightweight Keepalived container based on Alpine Linux.**  
 Dynamically generates `keepalived.conf` at runtime using environment variables. Ideal for simple HA/VRRP setups.
@@ -23,7 +25,7 @@ docker run --rm \
   -e VRRP_AUTH_TYPE=PASS \
   -e VRRP_AUTH_PASS=1234 \
   -e VRRP_VIRTUAL_IP=192.168.1.100 \
-  carminezac/keepalived:v2.3.1-alpine3.21.3
+  ghcr.io/carminezac/keepalived:latest
 ```
 
 
@@ -47,7 +49,7 @@ docker run --rm \
 ```yaml
 services:
   keepalived:
-    image: carminezac/keepalived:latest
+    image: ghcr.io/carminezac/keepalived:latest
     network_mode: host
     cap_add:
       - NET_ADMIN
